@@ -29,12 +29,22 @@ class LinkedList():
             self.head = node
     
     def appendToEnd(self, value) -> None:
-        pass
+        node = Node(value)
+
+        #Edge to make sure Linked List is not empty
+        if self.head is None:
+            self.head = node
+        
+        #Traverse through the Linked List to find the end, and append node to the end
+        current = self.head
+        while(current.next is not None):
+            current = current.next
+        current.next = node
     
     def printLinkedList(self):
         current = self.head
 
-        while(current):
+        while(current is not None):
             print(current.value)
             current = current.next
 
@@ -42,5 +52,6 @@ class LinkedList():
 l = LinkedList()
 l.appendToBeginning(4)
 l.appendToBeginning(5)
+l.appendToEnd(6)
 l.printLinkedList()
 
