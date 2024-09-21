@@ -80,7 +80,6 @@ class LinkedList():
         else:
             print('Index given is out of bounds')
         
-
     def getSize(self) -> None:
         size = 0
 
