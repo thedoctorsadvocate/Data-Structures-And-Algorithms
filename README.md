@@ -9,3 +9,5 @@
 * git commit -m "Message"
 * git push
 
+##### Data Structures
+* Stack (LIFO)
